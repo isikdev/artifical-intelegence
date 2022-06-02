@@ -1,0 +1,275 @@
+$primary: #08101e
+$dark-blue: #0a121f
+$blue: #3A68B8
+$gray: #b5b7bb
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Open Sans', sans-serif
+    transition: .2s
+body
+    scroll-behavior: smooth
+    text-rendering: optimizeSpeed
+    background-color: $primary
+.container-fluid
+    max-width: 100%
+    width: 100%
+    padding: 0px 0px
+    margin: 0 auto
+.container
+    max-width: 1240px
+    width: 100%
+    padding: 0px 20px
+    margin: 0px auto
+.btn
+    display: none
+h1,
+h2,
+h3
+    font-size: 48px
+h4
+    font-size: 34px
+button
+    padding: 10px 25px
+    background-color: $blue
+    border-radius: 5px
+    font-weight: 600
+    font-size: 14px
+    cursor: pointer
+    color: #fff
+    border: 0px none
+    &:hover
+        opacity: .4
+.subtitle
+    color: $gray
+    max-width: 474px
+    margin-top: 40px
+.navbar
+    min-height: 100px
+    padding: 15px 0px
+    position: relative
+    .nav-content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        align-items: center
+        align-self: center
+        .nav-brand
+            a
+                text-decoration: none
+                &:hover
+                    opacity: .5
+        .nav-links
+            nav
+                ul
+                    display: flex
+                    max-width: 100%
+                    justify-content: space-between
+                    li
+                        list-style: none
+                        a
+                            text-decoration: none
+                            color: #fff
+                            font-weight: 600
+                            &:hover
+                                color: $blue
+                                border-bottom: 3px solid $blue
+                                padding-bottom: 2px
+.info
+    .info-content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .info-intro
+            .info-tt
+                color: $blue
+                font-weight: 700
+                text-transform: uppercase
+                margin-bottom: 10px
+            h1
+                color: #fff
+            .info-btns
+                display: flex
+                justify-content: space-between
+                max-width: 60%
+                margin-top: 50px
+.about
+    margin: 110px 0px
+    .about-content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .about-intro
+            h1
+                color: #fff
+            p
+                margin-top: 20px
+            button
+                margin-top: 50px
+        .about-img
+            max-width: 50%
+    .about-slider
+        .about-card
+            max-width: 341px
+            min-height: 341px
+            padding: 20px 20px
+            background-color: #0f1624
+            margin: 30px 30px
+            border-radius: 10px
+            img
+                margin: 0px auto
+                display: flex
+                flex-direction: column
+                justify-content: center
+            h1
+                color: #fff
+                margin: 30px auto
+                text-align: center
+                max-width: 256px
+                font-size: 18px
+            p
+                max-width: 341px
+                color: #fff
+                text-align: center
+                margin: 30px auto
+footer
+    padding-bottom: 40px
+    .footer-content
+        display: grid
+        grid-template-columns: 3fr 2fr 2fr 3fr
+        justify-content: space-between
+        .footer-block
+            display: flex
+            flex-direction: column
+            h1
+                font-size: 22px
+                color: #fff
+            p
+                color: #9c9fa5
+            .subtitle-p
+                max-width: 300px
+            a
+                color: #fff
+                margin-top: 20px
+                text-decoration: none
+                &:hover
+                    color: $blue
+
+        .footer-link
+            margin-top: 30px
+            a
+                color: #8f9298
+                font-weight: 600
+    .developer
+        margin: 40px auto
+        text-align: center
+        padding: 10px 0px
+        hr
+            color: $blue
+            max-width: 100%
+            margin-bottom: 15px
+        a
+            color: #fff
+            text-decoration: none
+            font-size: 20px
+@media screen and (max-width: 1240px)
+    .container
+        max-width: 1240px
+        width: 100%
+        padding: 0px 10px
+        margin: 0 auto
+    .info-btns
+        max-width: 100%
+        flex-direction: column
+        button
+            margin: 15px 0px
+    .about-img
+        img
+            max-width: 90%
+@media screen and (max-width: 920px)
+    .container
+        max-width: 920px
+        width: 100%
+        padding: 0px 10px
+        margin: 0 auto
+    h1,h2,h3
+        font-size: calc(24px + (16 + 16 * 0.7) * ((100vw - 320px) / 920))
+    .btn
+        display: block
+        position: absolute
+        right: 120px
+        top: 30px
+    .menu
+        min-height: 100vh
+        background: $dark-blue
+        width: 100%
+        position: fixed
+        top: -120%
+        left: 0
+        z-index: 2000
+        padding: 15px 20px
+        transition: .5s
+        display: block
+        ul
+            flex-direction: column
+            margin: 10px 0px
+            li
+                margin: 20px 0px
+                text-align: center
+            button
+                max-width: 70%
+                margin: 0px auto
+    .menu-active
+        top: 0
+    .info-content
+        flex-direction: column
+        .info-intro
+            .info-btns
+                max-width: 100%
+                margin: 0px auto
+        .info-img
+            img
+                max-width: 90%
+                margin: 0px auto
+                display: flex
+                flex-direction: column
+                justify-content: center
+    .about-content
+        flex-direction: column
+        .about-intro
+            margin: 0px auto
+            text-align: center
+            p
+                margin: 20px auto
+        .about-img
+            img
+                max-width: 100%
+                display: flex
+                flex-direction: column
+                margin: 20px auto
+                justify-content: center
+    footer
+        .footer-content
+            grid-template-columns: 1fr 1fr
+            .footer-two-block
+                margin-top: 70px
+    @media screen and (max-width: 740px)
+        .container
+            max-width: 540px
+            width: 100%
+            padding: 0px 13px
+            margin: 0 auto
+        .navbar
+            .nav-content
+                grid-template-columns: 1fr 2fr
+        .btn
+            display: block
+            position: absolute
+            right: 10px
+            top: 30px
+        .info
+            margin: 70px 0px
+        footer
+            .footer-content
+                grid-template-columns: 1fr
